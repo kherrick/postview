@@ -10,7 +10,8 @@ An adventure in C# on Linux, using Visual Studio Code and Blazor.
 # develop
 
 ```bash
-dotnet run
+cd postview.Server \
+  && dotnet run
 ```
 
 # initially bootstrapped with the following
