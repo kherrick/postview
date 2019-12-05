@@ -1,0 +1,5 @@
+﻿<linker>
+  <assembly fullname="postview">
+    <type fullname="*" required="true" />
+  </assembly>
+</linker>

@@ -5,13 +5,12 @@ An adventure in C# on Linux, using Visual Studio Code and Blazor.
 # requirements
 
 * [bash](https://www.gnu.org/software/bash/)
-* [.NET Core 2.1.500 or later](https://go.microsoft.com/fwlink/?linkid=873092)
+* [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 # develop
 
 ```bash
-cd postview.Server \
-  && dotnet run
+dotnet run
 ```
 
 # initially bootstrapped with the following
@@ -21,9 +20,9 @@ cd postview.Server \
 
 readonly APP_NAME='postview'
 
-dotnet new -i Microsoft.AspNetCore.Blazor.Templates \
- && dotnet new blazorserverside -o "$APP_NAME" \
- && cd "$APP_NAME/$APP_NAME.Server" || exit 1
+dotnet new -i Microsoft.AspNetCore.Blazor.Templates::3.1.0-preview4.19579.2 \
+  && dotnet new blazorwasm -o "$APP_NAME" \
+  && cd "$APP_NAME" || exit 1
 
 dotnet run
 ```
